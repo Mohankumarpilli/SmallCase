@@ -154,9 +154,12 @@ function App() {
     filterCount++;
   }
 
+  if (volatile.size > 0) {
+    filterCount += volatile.size;
+  }
+
   if (checkbox.size > 0) {
     filterCount += checkbox.size;
-    filterCount += volatile.size;
     displayStocks = filterCheckBox(displayStocks, checkbox);
   }
   return (
